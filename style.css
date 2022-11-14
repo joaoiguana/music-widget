@@ -8,6 +8,17 @@ body {
 .container {
   width: min(100% - 15px, 840px);
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 1.25rem;
+}
+
+.card {
+  width: 18.75rem;
 }
 
 .music-widget {
@@ -61,7 +72,7 @@ ul {
   display: flex;
   justify-content: space-evenly;
   margin: 0;
-  padding: 0.3rem;
+  padding: 0.5rem;
   background-color: #f0f0f0;
 }
 
@@ -79,6 +90,7 @@ ul {
   border-radius: 50%;
   padding: 0;
   border: none;
+  background-color: #ff679f;
 }
 
 i {
