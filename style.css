@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   background-color: #bfbfbf;
+  margin: 0 0 100px;
 }
 
 .container {
@@ -19,6 +25,23 @@ h1 {
 
 .card {
   width: 18.75rem;
+  margin: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.row {
+  display: grid;
+  grid-template-areas:
+    "card1 card2 card3";
+}
+
+@media only screen and (max-width: 950px) {
+  .row {
+    grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+  }
 }
 
 .music-widget {
@@ -28,7 +51,8 @@ h1 {
 }
 
 .art {
-  border-radius: 5%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
@@ -74,6 +98,7 @@ ul {
   margin: 0;
   padding: 0.5rem;
   background-color: #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .button-previous-next {
@@ -91,6 +116,7 @@ ul {
   padding: 0;
   border: none;
   background-color: #ff679f;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 i {
@@ -99,4 +125,22 @@ i {
 
 .uil-play {
   margin-left: 0.25rem;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #505A5B;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.footer-logo {
+  height: 2.5rem;
 }
